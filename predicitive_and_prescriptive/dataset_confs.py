@@ -17,7 +17,7 @@ dynamic_num_cols = {}
 static_num_cols = {}
 filename = {}
 
-logs_dir = "/content/Prescriptive-monitoring-Causal-Inference/predicitive_and_prescriptive"
+logs_dir = "/content/rashi-research/predicitive_and_prescriptive"
 #logs_dir = "/home/mshoush/ut_cs_phd/phd/code/gitHub/predictive_and_prescriptive"
 
 #### BPIC2017 settings ####
@@ -25,7 +25,7 @@ logs_dir = "/content/Prescriptive-monitoring-Causal-Inference/predicitive_and_pr
 bpic2017_dict = {"prepared_bpic2017": "prepared_bpic2017.pkl"}
 
 for dataset, fname in bpic2017_dict.items():
-    filename[dataset] = "".join(logs_dir, fname)
+    filename[dataset] = os.path.join(logs_dir, fname)
     # min cols
     case_id_col[dataset] = "Case ID"
     activity_col[dataset] = "Activity"
